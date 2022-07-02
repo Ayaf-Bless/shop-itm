@@ -1,7 +1,10 @@
 import { getAllProductsQuery } from "../utils/queries/get-all-products";
 import { fetchAPI } from "../utils/queries/fetch-api";
+import { ProductConnection } from "../schema";
+
+type RetunType = { products: ProductConnection };
 
 export const getAllProducts = async () => {
-  const products = await fetchAPI({ query: getAllProductsQuery });
-  return products.data;
+  const { data } = await fetchAPI<RetunType>({ query: getAllProductsQuery });
+  return data.products;
 };
