@@ -1,7 +1,7 @@
 import React from "react";
 import type { InferGetStaticPropsType } from "next";
 //own import
-import { getAllProducts } from "../framework/shopify/products/get-all-products";
+import { getAllProducts } from "@framework/products/get-all-products";
 
 export async function getStaticProps() {
   const products = await getAllProducts();

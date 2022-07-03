@@ -3,6 +3,7 @@
     "module": "commonjs",
     "target": "es5",
     "sourceMap": true,
+    "baseUrl": ".",
     "lib": [
       "dom",
       "dom.iterable",
@@ -17,7 +18,13 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "paths": {
+      "@common": ["framework/common"],
+      "@common/*":  ["framework/common/*"],
+      "@framework": ["framework/shopify"],
+      "@framework/*":  ["framework/shopify/*"]
+    }
   },
   "exclude": [
     "node_modules"
