@@ -8,6 +8,9 @@ const nextConfig = withFrameworkConfig({
     locales: ["en-US", "fr"],
     defaultLocale: "en-US",
   },
+  framework: {
+    name: "shopify",
+  },
 });
 
 module.exports = nextConfig;
