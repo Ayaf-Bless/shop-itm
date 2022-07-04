@@ -6,7 +6,6 @@ import { getConfic } from "@framework/api/config";
 
 export async function getStaticProps() {
   const config = getConfic();
-  console.log(config.apiUrl);
   const products = await getAllProducts(config);
 
   return {
