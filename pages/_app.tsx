@@ -1,7 +1,13 @@
 import { AppProps } from "next/app";
-import { Layout } from "@components/common";
+import { FC } from "react";
+import { AuxProps } from "@components/common/type";
+// import { Layout } from "@components/common";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({
+  Component,
+  pageProps,
+}: AppProps & { Component: { Layout: FC<AuxProps> } }) {
+  const { Layout } = Component;
   return (
     <>
       <Layout>

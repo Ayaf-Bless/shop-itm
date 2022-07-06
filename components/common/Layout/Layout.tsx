@@ -1,9 +1,7 @@
 import React from "react";
+import { AuxProps } from "@components/common/type";
 
-export interface AuxProps {
-  children: React.ReactNode;
-}
-const Layout = ({ children }: AuxProps) => {
+const Layout: React.FC<AuxProps> = ({ children }): JSX.Element => {
   return <div className={"Layout"}>{children}</div>;
 };
 
