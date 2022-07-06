@@ -1,6 +1,7 @@
 import { AppProps } from "next/app";
 import { FC } from "react";
 import { AuxProps } from "@components/common/type";
+import "@assets/main.css";
 
 const Noop: FC<AuxProps> = ({ children }) => <>{children}</>;
 
