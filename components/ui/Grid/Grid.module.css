@@ -1,5 +1,7 @@
 .root {
-  @apply grid grid-cols-3 grid-rows-2;
+  @apply grid grid-cols-1 gap-0;
+
+  @apply lg:grid-cols-3 grid-rows-2;
 }
 
 .root > * {
@@ -7,7 +9,13 @@
   height: 500px;
   max-height: 800px;
 
-  @sreen lg {
-    height: inherit;
-  }
+  @apply lg:h-fit;
+}
+
+.layoutA {
+  color: #5f3dc4;
+}
+
+.layoutA {
+  color: #37b679;
 }
