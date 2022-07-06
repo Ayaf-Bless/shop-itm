@@ -21,7 +21,7 @@ const ProductCard: React.FC<ChildrenProps & Props> = ({ product }) => {
           </div>
           {product.images && (
             <Image
-              src={"/product-image-placeholder.svg"}
+              src={product.images[0].url ?? "/product-image-placeholder.svg"}
               alt={product.name ?? "Product image"}
               height={540}
               width={540}

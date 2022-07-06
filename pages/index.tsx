@@ -5,6 +5,7 @@ import { getAllProducts } from "@framework/products/get-all-products";
 import { getConfic } from "@framework/api/config";
 import { Layout } from "@components/common";
 import { ProductCard } from "@components/product";
+import { Grid } from "@components/ui";
 
 export async function getStaticProps() {
   const config = getConfic();
@@ -22,11 +23,15 @@ export default function Home({
   products,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <div>
-      {products.slice(0, 3).map((product) => (
-        <ProductCard product={product} key={product.id} />
-      ))}
-    </div>
+    <>
+      <div>
+        <Grid>
+          {products.slice(0, 3).map((product) => (
+            <ProductCard product={product} key={product.id} />
+          ))}
+        </Grid>
+      </div>
+    </>
   );
 }
 
