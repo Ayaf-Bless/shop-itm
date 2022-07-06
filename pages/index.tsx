@@ -4,6 +4,7 @@ import type { InferGetStaticPropsType } from "next";
 import { getAllProducts } from "@framework/products/get-all-products";
 import { getConfic } from "@framework/api/config";
 import { Layout } from "@components/common";
+import { ProductCard } from "@components/product";
 
 export async function getStaticProps() {
   const config = getConfic();
@@ -20,7 +21,13 @@ export async function getStaticProps() {
 export default function Home({
   products,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  return <div>{JSON.stringify(products)}</div>;
+  return (
+    <div>
+      {products.slice(0, 3).map((product) => (
+        <ProductCard product={product} key={product.id} />
+      ))}
+    </div>
+  );
 }
 
 Home.Layout = Layout;

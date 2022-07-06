@@ -899,7 +899,7 @@ export type CheckoutLineItem = Node & {
   title: Scalars["String"];
   /** Unit price of the line item. */
   unitPrice?: Maybe<MoneyV2>;
-  /** Product variant of the line item. */
+  /** product variant of the line item. */
   variant?: Maybe<ProductVariant>;
 };
 
@@ -3900,7 +3900,7 @@ export type Product = Node &
     /** The description of the product, complete with HTML formatting. */
     descriptionHtml: Scalars["HTML"];
     /**
-     * A human-friendly unique string for the Product automatically generated from its title.
+     * A human-friendly unique string for the product automatically generated from its title.
      * They are used by the Liquid templating language to refer to objects.
      */
     handle: Scalars["String"];
@@ -3938,7 +3938,7 @@ export type Product = Node &
     tags: Array<Scalars["String"]>;
     /** The product’s title. */
     title: Scalars["String"];
-    /** The total quantity of inventory in stock for this Product. */
+    /** The total quantity of inventory in stock for this product. */
     totalInventory?: Maybe<Scalars["Int"]>;
     /**
      * The date and time when the product was last modified.
@@ -4106,7 +4106,7 @@ export type ProductConnection = {
   pageInfo: PageInfo;
 };
 
-/** An auto-generated type which holds one Product and a cursor during pagination. */
+/** An auto-generated type which holds one product and a cursor during pagination. */
 export type ProductEdge = {
   __typename?: "ProductEdge";
   /** A cursor for use in pagination. */
@@ -4146,7 +4146,7 @@ export enum ProductMediaSortKeys {
 }
 
 /**
- * Product property names like "Size", "Color", and "Material" that the customers can select.
+ * product property names like "Size", "Color", and "Material" that the customers can select.
  * Variants are selected based on permutations of these options.
  * 255 characters limit each.
  */
@@ -4187,7 +4187,7 @@ export type ProductPriceRangeEdge = {
   node: ProductPriceRange;
 };
 
-/** The set of valid sort keys for the Product query. */
+/** The set of valid sort keys for the product query. */
 export enum ProductSortKeys {
   /** Sort by the `title` value. */
   Title = "TITLE",

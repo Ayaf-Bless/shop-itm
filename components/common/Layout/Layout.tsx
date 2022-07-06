@@ -1,8 +1,8 @@
 import React from "react";
-import { AuxProps } from "@components/common/type";
+import { ChildrenProps } from "@components/common/type";
 import style from "./Layout.module.css";
 
-const Layout: React.FC<AuxProps> = ({ children }): JSX.Element => {
+const Layout: React.FC<ChildrenProps> = ({ children }): JSX.Element => {
   return (
     <div className={style.root}>
       <main className={"fit"}>{children}</main>;
