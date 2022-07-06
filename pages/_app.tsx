@@ -1,13 +1,14 @@
 import { AppProps } from "next/app";
 import { FC } from "react";
 import { AuxProps } from "@components/common/type";
-// import { Layout } from "@components/common";
+
+const Noop: FC<AuxProps> = ({ children }) => <>{children}</>;
 
 function MyApp({
   Component,
   pageProps,
 }: AppProps & { Component: { Layout: FC<AuxProps> } }) {
-  const { Layout } = Component;
+  const Layout = Component.Layout ?? Noop;
   return (
     <>
       <Layout>
