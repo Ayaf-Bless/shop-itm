@@ -4,9 +4,9 @@ import style from "./Layout.module.css";
 
 const Layout: React.FC<AuxProps> = ({ children }): JSX.Element => {
   return (
-    <>
-      <main className={style.root}>{children}</main>;
-    </>
+    <div className={style.root}>
+      <main className={"fit"}>{children}</main>;
+    </div>
   );
 };
 
