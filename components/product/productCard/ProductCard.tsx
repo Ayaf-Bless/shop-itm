@@ -29,6 +29,7 @@ const ProductCard: React.FC<ChildrenProps & Props> = ({ product }) => {
               width={540}
               quality={"58"}
               layout={"responsive"}
+              className={style.productImage}
             />
           )}
         </a>
