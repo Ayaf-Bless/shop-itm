@@ -15,7 +15,11 @@
 .layoutA {
   color: #5f3dc4;
 }
+.layoutA > *:nth-child(6n + 1),
+.layoutA > *:nth-child(6n + 5) {
+  @apply lg:col-span-2 row-span-2;
+}
 
-.layoutA {
+.layoutB {
   color: #37b679;
 }

@@ -1,0 +1,42 @@
+.root {
+  @apply relative;
+  color: var(--text-base);
+}
+.root:nth-child(6n + 1) .productBg {
+  @apply bg-violet;
+}
+.root:nth-child(6n + 3) .productBg {
+  @apply bg-pink;
+}
+.root:nth-child(6n + 5) .productBg {
+  @apply bg-blue;
+}
+.root:nth-child(6n + 6) .productBg {
+  @apply bg-cyan;
+}
+.productBg {
+  @apply absolute inset-0 z-0;
+  background-color: #212529;
+}
+
+.productTag {
+  @apply absolute top-0 left-0 z-20;
+}
+.productTag > * {
+  font-size: 2rem;
+  letter-spacing: 0.4px;
+}
+
+.productTitle {
+  @apply font-bold;
+  line-height: 2.2em;
+}
+.productTitle span {
+  @apply py-4 px-6;
+  box-decoration-break: clone;
+}
+
+.productPrice {
+  @apply pb-4 pt-2 px-6 font-semibold text-sm;
+  letter-spacing: 0.4px;
+}
