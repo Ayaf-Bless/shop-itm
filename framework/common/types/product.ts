@@ -1,6 +1,12 @@
+import { CurrencyCode } from "@framework/schema";
+
 export interface ProductImage {
   url: string;
   alt?: string;
+}
+interface ProductPrice {
+  value: number;
+  currencyCode: CurrencyCode;
 }
 
 export interface Product {
@@ -12,4 +18,5 @@ export interface Product {
   images: ProductImage[];
   vendor: string;
   handle?: string;
+  price: ProductPrice;
 }
