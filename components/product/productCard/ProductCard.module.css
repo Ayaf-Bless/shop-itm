@@ -1,5 +1,6 @@
 .root {
-  @apply relative max-h-full;
+  @apply relative;
+  max-height: 100% !important;
   color: var(--text-base);
 }
 .root:nth-child(6n + 1) .productBg {

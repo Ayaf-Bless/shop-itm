@@ -5,7 +5,7 @@ import { getAllProducts } from "@framework/products/get-all-products";
 import { getConfic } from "@framework/api/config";
 import { Layout } from "@components/common";
 import { ProductCard } from "@components/product";
-import { Grid } from "@components/ui";
+import { Grid, Hero } from "@components/ui";
 
 export async function getStaticProps() {
   const config = getConfic();
@@ -30,6 +30,12 @@ export default function Home({
             <ProductCard product={product} key={product.id} />
           ))}
         </Grid>
+        <Hero
+          headline={"Shop it and shop it right"}
+          description={
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta enim eget scelerisque fermentum."
+          }
+        />
       </div>
     </>
   );

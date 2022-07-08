@@ -1,0 +1,17 @@
+.root {
+  @apply grid grid-cols-1 py-32;
+  @apply md:grid-cols-2;
+  color: #fff;
+}
+
+.headline {
+  @apply text-4xl leading-10 font-extrabold sm:text-5xl sm:leading-none sm:tracking-tight lg:text-6xl;
+}
+
+.description {
+  @apply mt-5 text-xl leading-7;
+}
+
+.link {
+  @apply pt-3 font-bold hover:underline cursor-pointer block;
+}
