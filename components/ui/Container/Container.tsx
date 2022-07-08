@@ -2,7 +2,7 @@ import React from "react";
 import { ChildrenProps } from "@components/common/type";
 
 interface Props {
-  el?: any;
+  el?: React.ComponentType<React.HTMLAttributes<HTMLElement>>;
 }
 const Container: React.FC<ChildrenProps & Props> = ({
   children,
