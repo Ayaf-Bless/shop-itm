@@ -1,11 +1,11 @@
 .root {
-  @apply grid grid-cols-1 py-32;
-  @apply md:grid-cols-2;
+  @apply flex flex-col py-32 justify-center;
+  @apply md:flex-row;
   color: #fff;
 }
 
 .headline {
-  @apply text-4xl leading-10 font-extrabold sm:text-5xl sm:leading-none sm:tracking-tight lg:text-6xl;
+  @apply flex-1 max-w-xl text-4xl leading-10 font-extrabold sm:text-5xl sm:leading-none sm:tracking-tight lg:text-6xl;
 }
 
 .description {
