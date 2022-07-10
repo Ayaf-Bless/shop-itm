@@ -5,7 +5,7 @@ import { getAllProducts } from "@framework/products/get-all-products";
 import { getConfic } from "@framework/api/config";
 import { Layout } from "@components/common";
 import { ProductCard } from "@components/product";
-import { Grid, Hero } from "@components/ui";
+import { Grid, Hero, Marquee } from "@components/ui";
 
 export async function getStaticProps() {
   const config = getConfic();
@@ -36,6 +36,11 @@ export default function Home({
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta enim eget scelerisque fermentum."
           }
         />
+        <Marquee>
+          {products.slice(0, 3).map((product) => (
+            <ProductCard product={product} key={product.id} />
+          ))}
+        </Marquee>
       </div>
     </>
   );
