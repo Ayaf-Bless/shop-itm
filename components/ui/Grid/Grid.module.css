@@ -21,5 +21,9 @@
 }
 
 .layoutB {
-  color: #37b679;
+  color: #5f3dc4;
+}
+.layoutB > *:nth-child(6n + 2),
+.layoutB > *:nth-child(6n + 4) {
+  @apply lg:col-span-2 row-span-2;
 }

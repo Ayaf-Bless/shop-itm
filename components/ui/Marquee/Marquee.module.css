@@ -1,9 +1,13 @@
 .root {
   height: 320px;
+  @apply bg-black;
 }
 
 .container {
   @apply flex flex-row;
+}
+.secondary {
+  @apply bg-white;
 }
 .container > * {
   @apply flex-1 px-16 py-4 relative;
