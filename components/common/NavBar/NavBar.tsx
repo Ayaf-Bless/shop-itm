@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Container } from "@components/ui";
+import { UserNav } from "@components/common";
 import Link from "next/link";
 import s from "./NavBar.module.css";
 
@@ -9,7 +10,7 @@ const Navbar: FC = () => {
       <div className={s.root}>
         <div className="flex flex-1 items-center">
           <Link href="/">
-            <a className={s.logo}>NEXT_STORE</a>
+            <a className={s.logo}>SHOP - I</a>
           </Link>
           <nav className="ml-6 space-x-6">
             <Link href="/">
@@ -25,6 +26,9 @@ const Navbar: FC = () => {
               <a className={s.link}>Shoes</a>
             </Link>
           </nav>
+          <div className="flex flex-1 justify-end space-x-8">
+            <UserNav />
+          </div>
         </div>
       </div>
     </Container>
