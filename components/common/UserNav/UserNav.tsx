@@ -11,7 +11,7 @@ const UserNav: FC = function () {
           <Card />
         </li>
         <li className={style.item}>
-          <Link href={"/"}>
+          <Link href={"/whishlist"}>
             <a>
               <Heart />
             </a>
