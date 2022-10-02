@@ -8,10 +8,11 @@ import { useUI } from "@components/ui/context";
 
 const Layout: React.FC<ChildrenProps> = ({ children }): JSX.Element => {
   const ui = useUI();
+
   return (
     <div className={style.root}>
       <NavBar />
-      <Sidebar>
+      <Sidebar isOpen={ui.isSidebarOpen}>
         <CartSidebar />
       </Sidebar>
       <main className={"fit"}>
