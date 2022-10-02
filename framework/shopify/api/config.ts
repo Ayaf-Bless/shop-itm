@@ -13,6 +13,6 @@ const configWrapper = new Config({
   fetch: fetchAPI,
 });
 
-export function getConfic() {
+export function getConfig() {
   return configWrapper.getConfig();
 }

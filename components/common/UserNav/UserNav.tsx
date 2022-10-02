@@ -10,7 +10,7 @@ const UserNav: FC = function () {
     <nav>
       <ul className={style.list}>
         <li className={style.item}>
-          <Card onClick={ui.setSidebarOpen} />
+          <Card onClick={ui.openSidebar} />
         </li>
         <li className={style.item}>
           <Link href={"/whishlist"}>

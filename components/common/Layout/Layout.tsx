@@ -12,8 +12,8 @@ const Layout: React.FC<ChildrenProps> = ({ children }): JSX.Element => {
   return (
     <div className={style.root}>
       <NavBar />
-      <Sidebar isOpen={ui.isSidebarOpen}>
-        <CartSidebar />
+      <Sidebar onClose={ui.closeSidebar} isOpen={ui.isSidebarOpen}>
+        <CartSidebar onClose={ui.closeSidebar} />
       </Sidebar>
       <main className={"fit"}>
         {children}
