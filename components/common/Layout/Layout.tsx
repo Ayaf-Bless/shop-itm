@@ -13,7 +13,7 @@ const Layout: React.FC<ChildrenProps> = ({ children }): JSX.Element => {
     <div className={style.root}>
       <NavBar />
       <Sidebar onClose={ui.closeSidebar} isOpen={ui.isSidebarOpen}>
-        <CartSidebar onClose={ui.closeSidebar} />
+        <CartSidebar />
       </Sidebar>
       <main className={"fit"}>
         {children}
